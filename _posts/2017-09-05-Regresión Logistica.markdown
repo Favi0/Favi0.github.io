@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll2!"
+title:  "Regresión Logistica"
 date:   2017-09-05 22:00:35 -0300
 categories: jekyll update
 ---
