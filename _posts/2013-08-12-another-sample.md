@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Another sample
-tags: [jekyll, syntax]
+tags: [jekyll, syntax,MachineLearning]
 categories:
 - blog
 ---
