@@ -1,13 +1,10 @@
-Regresión logística	
-===================
-
 Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
 
 
-1. Motivación
+Motivación
 -------------
 
-2. Introducción
+Introducción
 -------------
 
 Desde el punto de vista del aprendizaje automático, la regresión logistica es un modelo de clasificación fácil de implementar y con buen desempeño en problemas con clases linealmente separables. Podemos resumir algunas de sus características:
@@ -22,7 +19,7 @@ Desde el punto de vista del aprendizaje automático, la regresión logistica es 
 > - Hace uso de una función de Coste y un optimizador para la misma.
 > - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
 
-3. Desarrollo del Modelo: Intuición 
+Desarrollo del Modelo: Intuición 
 -------------------
 
 La regresión logistica es un modelo basado en la probabilidad, es decir que el modelo nos devolverá las probabilidades que tienen las distintas instancias de pertenecer a alguna de clases con las que estemos trabajando. Para entender mejor la idea, veamos unos mínimos conceptos previos.
@@ -67,5 +64,5 @@ Podrían utilizarse otras funciones en vez de la *sigmoidea* , pero esta present
  - Se relaciona de forma sencilla las posibilidades/chances de sucesos (**odds**) descriptas al inicio.
  - Los gradientes son fáciles de calcular.
 
-3.2. Aprendizaje de los pesos
+Aprendizaje de los pesos
 -------------------
