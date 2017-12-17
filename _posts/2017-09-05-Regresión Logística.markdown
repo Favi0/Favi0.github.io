@@ -17,7 +17,6 @@ Desde el punto de vista del aprendizaje automático, la regresión logistica es 
 > - Puede utilizarse en problemas de clasificación multiclase (uno contra todos).
 > - Consta de parámetros que deberán aprenderse.
 > - Hace uso de una función de Coste y un optimizador para la misma.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are synchronized with **Google Drive** or **Dropbox** (check out the [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
 
 Desarrollo del Modelo: Intuición 
 -------------------
