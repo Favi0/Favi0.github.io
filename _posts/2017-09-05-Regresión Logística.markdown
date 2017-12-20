@@ -1,7 +1,7 @@
 Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
 
 
-Motivación
+Motivación xd
 -------------
 
 Introducción
