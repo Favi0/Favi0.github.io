@@ -43,7 +43,7 @@ La regresión logistica es un modelo basado en la probabilidad, es decir que el 
 La probabilidad ***p*** es la medida de estimación que tenemos de que ocurra un evento determinado, ej. que una muestra que queremos clasificar pertenezca a una de las clases y=0 o y=1. 
 **p tomará valores comprendidos entre 0 (0%) y 1 (100%).** 
 
-Llamemos **Razón de probabilidades ** (conocida popularmente como odds Ratio) a la razón de *la probabilidad de que suceda ese evento*, sobre, la *probabilidad de que no suceda ese evento*. Es decir,
+Llamemos **Razón de probabilidades** (conocida popularmente como odds Ratio) a la razón de *la probabilidad de que suceda ese evento*, sobre, la *probabilidad de que no suceda ese evento*. Es decir,
 
 ![enter image description here](http://latex.codecogs.com/gif.latex?OR=%5Cfrac%7Bp%7D%7B%281-p%29%7D)
 
