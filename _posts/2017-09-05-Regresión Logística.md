@@ -1,4 +1,4 @@
-﻿Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
+Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
 
 
 Notación 
@@ -17,7 +17,7 @@ Entonces X es la concatenación de cada muestra individual Xi. A su vez cada mue
 ![enter image description here](http://latex.codecogs.com/gif.latex?x%5E%7B%28i%29%7D%3D%5Cbegin%7Bbmatrix%7D%20x_1%5E%7B%28i%29%7D%20%5C%5C%20x_2%5E%7B%28i%29%7D%20%5C%5C...%5C%5Cx_n%5E%7B%28i%29%7D%20%5Cend%7Bbmatrix%7D%20%2C%20y%5E%7B%28i%29%7D%3D%5Cbegin%7Bbmatrix%7D%20y%5E%7B%28i%29%7D%20%5Cend%7Bbmatrix%7D)
 
  
-**La dimensión de W dependerá de n **
+**La dimensión de W dependerá de n**
 
 ![enter image description here](http://latex.codecogs.com/gif.latex?W%3D%5Cbegin%7Bbmatrix%7Dw_1%20%5C%5C%20w_2%5C%5C...%5C%5C%20w_n%20%5Cend%7Bbmatrix%7D%2CW%5E%7Bt%7D%3D%5Cbegin%7Bbmatrix%7Dw_1%20%5C%20w_2...%5C%20w_n%20%5Cend%7Bbmatrix%7D)
 
