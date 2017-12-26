@@ -1,4 +1,4 @@
-Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
+﻿Hola, en este tutorial voy a tratar de explicaros de forma resumida, en que consiste el algoritmo de **regresión logística**.
 
 
 Notación 
@@ -43,7 +43,7 @@ La regresión logistica es un modelo basado en la probabilidad, es decir que el 
 La probabilidad ***p*** es la medida de estimación que tenemos de que ocurra un evento determinado, ej. que una muestra que queremos clasificar pertenezca a una de las clases y=0 o y=1. 
 **p tomará valores comprendidos entre 0 (0%) y 1 (100%).** 
 
-Llamemos **Razón de probabilidades** (conocida popularmente como odds Ratio) a la razón de *la probabilidad de que suceda ese evento*, sobre, la *probabilidad de que no suceda ese evento*. Es decir,
+Llamemos **Razón de probabilidades ** (conocida popularmente como **odds Ratio**) a la razón de *la probabilidad de que suceda ese evento*, sobre, la *probabilidad de que no suceda ese evento*. Es decir,
 
 ![enter image description here](http://latex.codecogs.com/gif.latex?OR=%5Cfrac%7Bp%7D%7B%281-p%29%7D)
 
@@ -72,6 +72,12 @@ Donde z será la combinación lineal descripta previamente.
 > Esta función es conocida como activación , hipótesis o no linearidad, sobre todo en redes neuronales.
 
 ![sigmoid](https://k60.kn3.net/B/A/8/5/C/8/8CB.png)
+
+De la gráfica puede verse que rapidamente converge a 1 o 0, en muchas aplicaciones donde solo nos importa clasificar la clase correctamente y no la probabilidad podemos usar un valor determinado como umbral 
+
+![boundary](https://latex.codecogs.com/gif.latex?%5Chat%7By%7D=%20%5Cleft%5C%7B%20%5Cbegin%7Barray%7D%7Blcc%7D%201%20&%20si%20&%20%5Csigma%28z%29%5Cgeq%200.5%20%5C%5C%20%5C%5C%200%20&%20si%20&%20%5Csigma%28z%29%3C0.5%20%5Cend%7Barray%7D%20%5Cright.)
+
+Hasta aquí llega la parte de la propagación hacia delante del algoritmo, la función sigmoid nos dará una predicción para cada instancia, las cuales luego compararemos con el label **y** de esas muestra en la etapa de entrenamiento, para determinar el error de la predicción y actualizar los parámetros del modelo.
 
 Podrían utilizarse otras funciones en vez de la *sigmoidea* , pero esta presenta ciertas ventajas que nos serán útiles mas adelante:
 
@@ -132,4 +138,33 @@ entonces obtenemos
 
 Entonces en cada pasada del algoritmo deberemos actualizar los pesos en ese factor.
 
+## Algoritmo##
 
+Lo explicado previamente puede ser expresado en una versión vectorizada, pudiendo ahorrarnos el tener que operar sobre cada muestra xi de forma individual, lo que nos permitirá eliminar un lazo de 1 a m sobre cada iteración o época del algoritmo , es decir pasar de O(n^2) a O(n)  
+
+```python
+#----PSEUDOCÓDIGO  ALGORITMO VECTORIZADO----
+
+#ENTRENAMIENTO:
+#sobre el training set, X=X_train
+for(i=0;i+1;iteraciones){
+
+Z  = W.T*X           #producto de matrices
+A  = sigmoid(Z)
+J  = -1/m*sum(Y*log(A)+(1-Y)*log(1-A))
+dw = 1/m*(X*(A-Y).T) #producto de matrices
+
+w  = w-learning_rate*dw
+mostrarCosto(J)      #vemos como cambia J en cada it
+}
+
+#PREDICCIONES:
+#sobre el test set, X=X_test
+A  = sigmoid(W.T*X)
+if (A[:,i] > 0.5):
+            Y_predict[:, i] = 1
+            
+elif (A[:,i] <= 0.5):
+            Y_predict[:, i] = 0
+
+```
